@@ -1,8 +1,8 @@
-import CREATE_IVENTORY from "../actions/types";
+import { CREATE_INVENTORY } from "../actions/types";
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case CREATE_IVENTORY:
+    case CREATE_INVENTORY:
       return {
         ...state,
         [action.payload.id]: action.payload
