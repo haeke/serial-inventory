@@ -16,7 +16,7 @@ const Features = () => {
         </div>
       </div>
       <div className="container">
-        <div className="col-md-12 text-center">
+        <div className="row text-center">
           <Card
             cardHeader="Add Software"
             cardSubHeader="We use the most up to date technology to track your inventory."
@@ -36,7 +36,7 @@ const Features = () => {
             <i className="fab fa-accusoft featuredIcon" />
           </Card>
         </div>
-        <div className="col-md-12">
+        <div className="row">
           <Pricing />
         </div>
       </div>
