@@ -1,20 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
 import { useForm } from "../../hooks/useForm";
 import { validate } from "../../utils/validate";
+import { createInventory } from "../../actions/index";
 
 import "./InventoryForm.css";
 
-const InventoryForm = () => {
+// The useForm hook allows us to reuse state inside of our form when we want to use a controlled form. We are using redux to provide the app with a global inventory state object for now but in the future there will be other global state objects.
+
+const InventoryForm = ({ createInventory }) => {
   // get the values from the useForm hook
   const { values, errors, handleChange, handleSubmit } = useForm(
     addInventory,
     validate
   );
 
-  console.log("values ", values);
-  console.log("errors object ", errors);
   function addInventory() {
     console.log("inventory item added.");
+    // pass the values object to the createInventory action
+    createInventory(values);
   }
 
   return (
@@ -112,4 +116,8 @@ const InventoryForm = () => {
   );
 };
 
-export default InventoryForm;
+// use the connect function to mapStateToProps and mapDispatchToProps
+export default connect(
+  null,
+  { createInventory }
+)(InventoryForm);

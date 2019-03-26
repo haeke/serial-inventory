@@ -1,6 +1,8 @@
 import { CREATE_INVENTORY } from "../actions/types";
 
-export default (state = {}, action) => {
+const initialState = {};
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case CREATE_INVENTORY:
       return {
