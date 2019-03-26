@@ -12,7 +12,7 @@ const IventoryList = ({ inventory }) => {
     );
   }
   return (
-    <div className="container mt-4">
+    <section className="container" style={{ marginTop: "100px" }}>
       {inventory.map(software => (
         <InventoryCard
           key={software.id}
@@ -22,7 +22,7 @@ const IventoryList = ({ inventory }) => {
           dateAquired={software.dateAquired}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

@@ -23,7 +23,7 @@ const InventoryForm = ({ createInventory }) => {
   }
 
   return (
-    <div className="container">
+    <section className="container">
       <form onSubmit={handleSubmit} className="formContainer">
         <div className="formWrapper">
           <label htmlFor="Software Name" className="formLabel">
@@ -116,7 +116,7 @@ const InventoryForm = ({ createInventory }) => {
       <Link to="/all">
         <button type="button">Inventory List</button>
       </Link>
-    </div>
+    </section>
   );
 };
 
