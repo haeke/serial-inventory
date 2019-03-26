@@ -1,6 +1,7 @@
 import React from "react";
 
 import InventoryLanding from "../InventoryLanding/InventoryLanding";
+import Services from "../Features/Features";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <div className="row">
         <h2>Home Page</h2>
         <InventoryLanding />
+        <Services />
       </div>
     </section>
   );
