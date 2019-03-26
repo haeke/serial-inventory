@@ -1,6 +1,7 @@
 import React from "react";
 
 import Card from "../Card/Card";
+import Pricing from "../Pricing/Pricing";
 
 import "./Features.css";
 
@@ -10,28 +11,33 @@ const Features = () => {
   return (
     <section className="featuresContainer">
       <div className="row">
-        <div className="col-md-12" />
-        <div className="col-md-8 col-md-offset-4 col-xs-12">
+        <div className="col-md-8 col-md-offset-2 col-xs-12">
           <h1 className="featuresHeader">We Provide Awesome Services</h1>
         </div>
       </div>
-      <div className="row">
+      <div className="container">
         <div className="col-md-12 text-center">
           <Card
-            logo={<i className="fas fa-ad featuredIcon" />}
             cardHeader="Add Software"
             cardSubHeader="We use the most up to date technology to track your inventory."
-          />
+          >
+            <i className="fas fa-ad featuredIcon" />
+          </Card>
           <Card
-            logo={<i className="fas fa-layer-group featuredIcon" />}
             cardHeader="Mobile Friendly"
             cardSubHeader="Our site has been tested to work on all screen sizes."
-          />
+          >
+            <i className="fas fa-layer-group featuredIcon" />
+          </Card>
           <Card
-            logo={<i className="fas fa-ad featuredIcon" />}
             cardHeader="Fast Service"
             cardSubHeader="Our site provides 24/7 support to answer any questions or concerns."
-          />
+          >
+            <i className="fab fa-accusoft featuredIcon" />
+          </Card>
+        </div>
+        <div className="col-md-12">
+          <Pricing />
         </div>
       </div>
     </section>

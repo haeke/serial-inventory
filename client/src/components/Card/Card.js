@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 import "./Card.css";
 
-const Card = ({ logo, cardHeader, cardSubHeader }) => {
+const Card = ({ children, cardHeader, cardSubHeader }) => {
   return (
     <div className="col-md-4 col-sm-8 cardContainer">
       <div className="row">
-        <div className="col-md-12">{logo}</div>
+        <div className="col-md-12">{children}</div>
       </div>
       <div className="row">
         <div className="col-md-12">
@@ -24,7 +24,7 @@ const Card = ({ logo, cardHeader, cardSubHeader }) => {
 };
 
 Card.propTypes = {
-  logo: PropTypes.node,
+  children: PropTypes.node,
   cardHeader: PropTypes.string,
   cardSubHeader: PropTypes.string
 };

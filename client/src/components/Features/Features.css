@@ -1,5 +1,6 @@
 .featuresContainer {
   background: #f7f7f7f7;
+  min-height: 50vh;
 }
 
 .featuredIcon {
@@ -9,4 +10,6 @@
 
 .featuresHeader {
   font-size: 50px;
+  margin-bottom: 30px;
+  text-align: center;
 }
