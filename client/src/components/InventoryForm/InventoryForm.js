@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { useForm } from "../../hooks/useForm";
 import { validate } from "../../utils/validate";
@@ -112,6 +113,9 @@ const InventoryForm = ({ createInventory }) => {
           <button onClick={handleSubmit}>Add Inventory</button>
         </div>
       </form>
+      <Link to="/all">
+        <button type="button">Inventory List</button>
+      </Link>
     </div>
   );
 };
