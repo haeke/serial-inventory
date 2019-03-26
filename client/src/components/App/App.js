@@ -1,10 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import InventoryForm from "../InventoryForm/InventoryForm";
 
 const App = () => {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <main className="container-fluid">
+      <Router>
+        <Switch>
+          <Route path="/" exact component={InventoryForm} />
+        </Switch>
+      </Router>
+    </main>
   );
 };
 
