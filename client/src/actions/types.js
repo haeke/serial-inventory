@@ -1,0 +1,1 @@
+export const CREATE_INVENTORY = "CREATE_INVENTORY";
