@@ -1,0 +1,43 @@
+.formContainer {
+  background: #cccccc;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.redBorder {
+  border: 1px solid red !important;
+}
+
+.formLabel {
+  font-size: 1.3rem;
+}
+
+.formInput {
+  border: 1px solid black;
+  height: 25px;
+  font-size: 14px;
+  padding: 1.5px;
+}
+
+.formTextArea {
+  border: 1px solid black;
+  font-size: 14px;
+  height: 100px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.formButton {
+  border: 1px solid black;
+  background: white;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.formButton:hover {
+  cursor: pointer;
+}
