@@ -1,0 +1,32 @@
+{
+  "inventory": [
+    {
+      "softwareName": "Office 2019",
+      "softwareCompany": "Microsoft",
+      "serialNumber": "123-123-4124",
+      "dateAquired": "2019-01-01",
+      "id": "100ac83f-1837-459a-a71a-f3f5e4b588e6"
+    },
+    {
+      "softwareName": "Adobe Acrobat",
+      "softwareCompany": "Adobe",
+      "serialNumber": "AWOJq0-12309-ASDQW",
+      "dateAquired": "1999-02-23",
+      "id": "e76e57ef-bbd6-4cd9-8061-6f66dbc8e42c"
+    },
+    {
+      "softwareName": "ArcGIS",
+      "softwareCompany": "Esri",
+      "serialNumber": "12390-123309-92947",
+      "dateAquired": "2019-03-20",
+      "id": "94fb8ba4-a98c-40b7-a80a-d8942aaddd9a"
+    },
+    {
+      "softwareName": "AutoCAD 2019",
+      "softwareCompany": "AutoDesk",
+      "serialNumber": "12309-23223-12392",
+      "dateAquired": "2019-04-01",
+      "id": "ac4737e6-ceb6-4493-9d08-3eb6bdeff212"
+    }
+  ]
+}
