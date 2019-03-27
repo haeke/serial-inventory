@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.navBackground {
+  background: var(--altBrandColor);
+}
+
+.logo {
+  margin: 0 auto 0 10px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkContainer {
+  display: flex;
+  list-style: none;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listItem {
+  padding: 10px;
+}
+
+.listItem a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--mainWhite);
+}
