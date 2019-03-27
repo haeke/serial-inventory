@@ -10,10 +10,8 @@ import "./Features.css";
 const Features = () => {
   return (
     <section className="featuresContainer">
-      <div className="row">
-        <div className="col-md-8 col-md-offset-2 col-xs-12">
-          <h1 className="featuresHeader">We Provide Awesome Services</h1>
-        </div>
+      <div className="col-md-8 col-md-offset-2 col-xs-12">
+        <h1 className="featuresHeader">We Provide Awesome Services</h1>
       </div>
       <div className="container">
         <div className="row text-center">

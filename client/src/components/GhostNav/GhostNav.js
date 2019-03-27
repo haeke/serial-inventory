@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import classnames from "classnames";
 
 import "./GhostNav.css";
@@ -27,20 +27,20 @@ function GhostNav({ pageOffset }) {
       onScroll={applyBackground}
     >
       <div className="logo">
-        <a href="#" className="logoLink">
+        <a href="#logo" className="logoLink">
           <h2>Logo</h2>
         </a>
       </div>
       <div className="links">
         <ul className="linkContainer">
           <li className="listItem">
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="listItem">
-            <a href="#">Articles</a>
+            <a href="#articles">Articles</a>
           </li>
           <li className="listItem">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

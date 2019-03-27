@@ -6,7 +6,7 @@
 }
 
 .cardContainer:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   background: var(--brandColor);
   z-index: 10;
 }
@@ -17,6 +17,7 @@
 
 .cardSubHeader {
   text-align: center;
+  padding: 0 10px;
 }
 
 @media (max-width: 992px) {
