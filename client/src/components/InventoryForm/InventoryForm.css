@@ -41,3 +41,21 @@
 .formButton:hover {
   cursor: pointer;
 }
+
+/* The custom styles that we want to use when creating a button */
+.primaryButton {
+  border: none;
+  background: var(--brandColor);
+  color: var(--mainWhite);
+}
+
+.primaryButton:hover {
+  color: var(--mainWhite);
+  text-decoration: none;
+}
+
+.secondaryButton {
+  border: none;
+  background: var(--altBrandColor);
+  color: var(--mainWhite);
+}

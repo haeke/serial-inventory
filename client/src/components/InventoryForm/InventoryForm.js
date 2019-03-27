@@ -112,12 +112,16 @@ const InventoryForm = ({ createInventory }) => {
           />
         </div>
         <div className="formWrapper">
-          <Button as="button" buttonType="primary" onClick={handleSubmit}>
+          <Button
+            as="button"
+            buttonStyle="primaryButton"
+            onClick={handleSubmit}
+          >
             Add Inventory
           </Button>
         </div>
       </form>
-      <Button as={Link} to="/all" buttonType="primary">
+      <Button as={Link} to="/all" buttonStyle="primaryButton">
         Inventory List
       </Button>
     </section>

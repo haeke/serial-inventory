@@ -17,7 +17,6 @@ function GhostNav({ pageOffset }) {
   ]);
   // The callback used to determine if the background should or should not be visible.
   const applyBackground = () => {
-    console.log("page offset ", window.pageOffset);
     return pageOffset < window.pageYOffset
       ? updateBackground("navBackground")
       : updateBackground("");
@@ -29,11 +28,9 @@ function GhostNav({ pageOffset }) {
       onScroll={applyBackground}
     >
       <div className="logo">
-        <a href="#logo" className="logoLink">
-          <Link to="/" className="logoLink">
-            InvenTrack
-          </Link>
-        </a>
+        <Button as={Link} to="/" buttonStyle="logoLink">
+          InvenTrack
+        </Button>
       </div>
       <div className="links">
         <ul className="linkContainer">
@@ -43,10 +40,14 @@ function GhostNav({ pageOffset }) {
             </Link>
           </li>
           <li className="listItem">
-            <a href="#about">About</a>
+            <Button as="a" href="#about">
+              About
+            </Button>
           </li>
           <li className="listItem">
-            <a href="#contact">Contact</a>
+            <Button as="a" href="#about">
+              Contact
+            </Button>
           </li>
         </ul>
       </div>
