@@ -5,6 +5,8 @@ import { useForm } from "../../hooks/useForm";
 import { validate } from "../../utils/validate";
 import { createInventory } from "../../actions/index";
 
+import Button from "../Button/Button";
+
 import "./InventoryForm.css";
 
 // The useForm hook allows us to reuse state inside of our form when we want to use a controlled form. We are using redux to provide the app with a global inventory state object for now but in the future there will be other global state objects.
@@ -110,12 +112,14 @@ const InventoryForm = ({ createInventory }) => {
           />
         </div>
         <div className="formWrapper">
-          <button onClick={handleSubmit}>Add Inventory</button>
+          <Button as="button" buttonType="primary" onClick={handleSubmit}>
+            Add Inventory
+          </Button>
         </div>
       </form>
-      <Link to="/all">
-        <button type="button">Inventory List</button>
-      </Link>
+      <Button as={Link} to="/all" buttonType="primary">
+        Inventory List
+      </Button>
     </section>
   );
 };

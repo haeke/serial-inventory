@@ -10,18 +10,19 @@
 }
 
 .landingHeaderWrapper {
-  border: 4px solid white;
+  border: 4px solid var(--brandColor);
+  padding: 20px;
 }
 
 .landingHeader {
   text-align: center;
-  color: white;
+  color: var(--brandColor);
   font-size: 55px;
 }
 
 .landingParagraph {
   text-align: center;
-  color: white;
+  color: var(--brandColor);
   font-size: 20px;
   font-weight: 900;
 }

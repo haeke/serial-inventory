@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <section className="container-fluid">
       <div className="row">
-        <h2>Home Page</h2>
         <InventoryLanding />
         <Services />
       </div>
