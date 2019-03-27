@@ -1,0 +1,16 @@
+.button {
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.primaryButton {
+  border: none;
+  background: var(--brandColor);
+  color: var(--mainWhite);
+}
+
+.secondaryButton {
+  border: none;
+  background: var(--altBrandColor);
+  color: var(--mainWhite);
+}
