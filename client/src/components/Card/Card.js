@@ -5,7 +5,7 @@ import "./Card.css";
 
 const Card = ({ children, cardHeader, cardSubHeader }) => {
   return (
-    <div className="col-md-4 col-sm-8 cardContainer">
+    <div className="col-md-4 col-xs-12 cardContainer">
       <div className="row">
         <div className="col-md-12">{children}</div>
       </div>
