@@ -1,0 +1,41 @@
+.footerContainer {
+  background: var(--altBrandColor);
+  color: var(--mainWhite);
+  text-align: center;
+}
+
+.contactHeader {
+  text-align: left;
+  font-size: 25px;
+}
+
+.phoneHeader {
+  font-size: 20px;
+}
+
+.phoneNumber {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.emailHeader {
+  font-size: 20px;
+}
+
+.emailAddress {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.locationHeader {
+  font-size: 20px;
+}
+
+.locationAddress {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+hr {
+  color: var(--brandColor);
+}

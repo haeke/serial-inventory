@@ -9,7 +9,7 @@ import "./Features.css";
 
 const Features = () => {
   return (
-    <section className="featuresContainer">
+    <section className="featuresContainer" id="about">
       <div className="col-md-8 col-md-offset-2 col-xs-12">
         <h1 className="featuresHeader">We Provide Awesome Services</h1>
       </div>

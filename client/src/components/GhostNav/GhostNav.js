@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import classnames from "classnames";
+
+import Button from "../Button/Button";
 
 import "./GhostNav.css";
 
@@ -28,16 +30,20 @@ function GhostNav({ pageOffset }) {
     >
       <div className="logo">
         <a href="#logo" className="logoLink">
-          <h2>Logo</h2>
+          <Link to="/" className="logoLink">
+            InvenTrack
+          </Link>
         </a>
       </div>
       <div className="links">
         <ul className="linkContainer">
           <li className="listItem">
-            <a href="#about">About</a>
+            <Link to="/add" className="logoLink">
+              Add
+            </Link>
           </li>
           <li className="listItem">
-            <a href="#articles">Articles</a>
+            <a href="#about">About</a>
           </li>
           <li className="listItem">
             <a href="#contact">Contact</a>

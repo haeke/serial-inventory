@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import GhostNav from "../GhostNav/GhostNav";
 import InventoryForm from "../InventoryForm/InventoryForm";
 import InventoryList from "../InventoryList/InventoryList";
+import Footer from "../Footer/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/add" exact component={InventoryForm} />
             <Route path="/all" exact component={InventoryList} />
           </Switch>
+          <Footer />
         </Router>
       </div>
     </main>
