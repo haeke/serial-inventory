@@ -1,9 +1,12 @@
 .card {
   background: #cccccc;
   transition: all 0.5s ease-in-out;
+  z-index: 1;
 }
 
 .card:hover {
-  background: teal;
+  background: #dad7d7;
+  color: var(--altBrandColor);
   transform: scale(1.2);
+  z-index: 10;
 }
