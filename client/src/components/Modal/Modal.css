@@ -4,6 +4,16 @@
   overflow: hidden;
 } */
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 #modalDialog {
   position: fixed;
   width: 100vw;
@@ -13,6 +23,7 @@
   justify-content: center;
   align-items: center;
   z-index: 2000;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .modalContainer {
