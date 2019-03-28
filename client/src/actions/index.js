@@ -1,4 +1,9 @@
-import { CREATE_INVENTORY } from "./types";
+import {
+  CREATE_INVENTORY,
+  EDIT_INVENTORY,
+  OPEN_MODAL,
+  CLOSE_MODAL
+} from "./types";
 import uuid from "random-uuid-v4";
 
 import inventory from "../api/inventory";
@@ -15,4 +20,33 @@ export const createInventory = formValues => async dispatch => {
   } catch (error) {
     console.error(error);
   }
+};
+
+export const editInventory = (inventoryID, formValues) => async dispatch => {
+  try {
+    // Create a patch request to update the Form Value items.
+    let response = await inventory.patch(
+      `/inventory/${inventoryID}`,
+      formValues
+    );
+
+    dispatch({
+      type: EDIT_INVENTORY,
+      payload: response.data
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Used to open and close the Modal component
+export const openModal = () => dispatch => {
+  return dispatch({
+    type: OPEN_MODAL
+  });
+};
+export const closeModal = () => dispatch => {
+  return dispatch({
+    type: CLOSE_MODAL
+  });
 };
