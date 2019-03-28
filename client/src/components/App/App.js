@@ -21,7 +21,7 @@ const App = ({ modal }) => {
             <Route path="/all" exact component={InventoryList} />
           </Switch>
           <Footer />
-          {modal.openModal === true && <Modal />}
+          <Modal />
         </Router>
       </div>
     </main>

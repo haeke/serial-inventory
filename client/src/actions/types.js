@@ -1,4 +1,5 @@
 export const CREATE_INVENTORY = "CREATE_INVENTORY";
+export const FETCH_INVENTORY = "FETCH_INVENTROY";
 export const EDIT_INVENTORY = "EDIT_INVENTORY";
 
 export const OPEN_MODAL = "OPEN_MODAL";

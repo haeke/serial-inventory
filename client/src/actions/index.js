@@ -2,7 +2,8 @@ import {
   CREATE_INVENTORY,
   EDIT_INVENTORY,
   OPEN_MODAL,
-  CLOSE_MODAL
+  CLOSE_MODAL,
+  FETCH_INVENTORY
 } from "./types";
 import uuid from "random-uuid-v4";
 
@@ -32,6 +33,20 @@ export const editInventory = (inventoryID, formValues) => async dispatch => {
 
     dispatch({
       type: EDIT_INVENTORY,
+      payload: response.data
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Responsible for getting all of the items inside of the json-server
+export const fetchInventory = () => async dispatch => {
+  try {
+    let response = await inventory.get("/inventory");
+
+    dispatch({
+      type: FETCH_INVENTORY,
       payload: response.data
     });
   } catch (error) {

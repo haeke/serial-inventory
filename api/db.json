@@ -27,6 +27,20 @@
       "serialNumber": "12309-23223-12392",
       "dateAquired": "2019-04-01",
       "id": "ac4737e6-ceb6-4493-9d08-3eb6bdeff212"
+    },
+    {
+      "softwareName": "Trident 2019",
+      "softwareCompany": "Trident Consulting",
+      "serialNumber": "123-12340459-123124",
+      "dateAquired": "2019-01-01",
+      "id": "9fc456b7-dc17-4719-bc83-e21cf1dbc756"
+    },
+    {
+      "softwareName": "Photoshop 2013",
+      "softwareCompany": "Adobe",
+      "serialNumber": "123-4104-12390",
+      "dateAquired": "2019-01-01",
+      "id": "a4665d0d-c845-453c-8059-f70b127e5f0f"
     }
   ]
 }

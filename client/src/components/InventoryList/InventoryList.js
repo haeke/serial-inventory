@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
+
+import { fetchInventory } from "../../actions/index";
 
 import InventoryCard from "../InventoryCard/InventoryCard";
 
-const IventoryList = ({ inventory }) => {
+const IventoryList = ({ inventory, fetchInventory }) => {
+  // We want to call useEffect when the inventory prop does not have any items inside
+  useEffect(() => {
+    if (Object.keys(inventory).length === 0) {
+      fetchInventory();
+    }
+  }, []);
   if (inventory.length < 0) {
     return (
       <div>
@@ -30,4 +38,7 @@ const mapStateToProps = state => ({
   inventory: Object.values(state.inventory)
 });
 
-export default connect(mapStateToProps)(IventoryList);
+export default connect(
+  mapStateToProps,
+  { fetchInventory }
+)(IventoryList);
