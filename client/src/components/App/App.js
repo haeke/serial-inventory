@@ -9,7 +9,7 @@ import InventoryList from "../InventoryList/InventoryList";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
 
-const App = ({ modal }) => {
+const App = () => {
   return (
     <main className="container-fluid">
       <div className="row">

@@ -22,3 +22,26 @@
   width: 90vw;
   height: 90vh;
 }
+
+.modalHeaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalHeader {
+  margin: auto;
+  display: inline-block;
+}
+
+.modalButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+.closeIcon {
+  font-size: 1.7rem;
+}
