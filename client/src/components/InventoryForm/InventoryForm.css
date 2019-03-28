@@ -1,7 +1,19 @@
+.inventoryFormContainer {
+  min-height: 70vh;
+  background: var(--brandColor);
+}
+
+.inventoryFormHeader {
+  margin: 80px 0 0 0;
+  background: var(--altBrandColor);
+  color: var(--mainWhite);
+  padding: 10px;
+  text-align: center;
+}
+
 .formContainer {
   background: #cccccc;
-  width: 300px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: 10px;
 }
 .redBorder {

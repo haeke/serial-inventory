@@ -1,8 +1,8 @@
 /* disable scrolling by setting the overflow attribute to hidden */
-body,
+/* body,
 #modal {
   overflow: hidden;
-}
+} */
 
 #modalDialog {
   position: fixed;

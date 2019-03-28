@@ -25,105 +25,107 @@ const InventoryForm = ({ createInventory }) => {
   }
 
   return (
-    <section className="container">
-      <form onSubmit={handleSubmit} className="formContainer">
-        <div className="formWrapper">
-          <label htmlFor="Software Name" className="formLabel">
-            Software Name
-          </label>
-          <small
-            style={
-              errors.softwareName
-                ? { visibility: "visible", color: "red" }
-                : { visibility: "hidden" }
-            }
-          >
-            * {errors.softwareName}
-          </small>
-          <input
-            type="text"
-            className={`formInput ${errors.softwareName && "redBorder"}`}
-            name="softwareName"
-            value={values.softwareName || ""}
-            onChange={handleChange}
-          />
+    <section className="inventoryFormContainer">
+      <div className="container">
+        <div className="row">
+          <h1 className="inventoryFormHeader">Add New Software</h1>
+          <form onSubmit={handleSubmit} className="formContainer">
+            <div className="formWrapper">
+              <label htmlFor="Software Name" className="formLabel">
+                Software Name
+              </label>
+              <small
+                style={
+                  errors.softwareName
+                    ? { visibility: "visible", color: "red" }
+                    : { visibility: "hidden" }
+                }
+              >
+                * {errors.softwareName}
+              </small>
+              <input
+                type="text"
+                className={`formInput ${errors.softwareName && "redBorder"}`}
+                name="softwareName"
+                value={values.softwareName || ""}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="formWrapper">
+              <label htmlFor="Company Name" className="formLabel">
+                Company Name
+              </label>
+              <small
+                style={
+                  errors.softwareCompany
+                    ? { visibility: "visible", color: "red" }
+                    : { visibility: "hidden" }
+                }
+              >
+                * {errors.softwareCompany}
+              </small>
+              <input
+                type="text"
+                className={`formInput ${errors.softwareCompany && "redBorder"}`}
+                name="softwareCompany"
+                value={values.softwareCompany || ""}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="formWrapper">
+              <label htmlFor="Software Name" className="formLabel">
+                Serial Number
+              </label>
+              <small
+                style={
+                  errors.serialNumber
+                    ? { visibility: "visible", color: "red" }
+                    : { visibility: "hidden" }
+                }
+              >
+                * {errors.serialNumber}
+              </small>
+              <input
+                type="text"
+                className={`formInput ${errors.serialNumber && "redBorder"}`}
+                name="serialNumber"
+                value={values.serialNumber || ""}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="formWrapper">
+              <label htmlFor="Date Aquired" className="formLabel">
+                Date Aquired
+              </label>
+              <small
+                style={
+                  errors.dateAquired
+                    ? { visibility: "visible", color: "red" }
+                    : { visibility: "hidden" }
+                }
+              >
+                * {errors.dateAquired}
+              </small>
+              <input
+                type="date"
+                className={`formInput ${errors.dateAquired && "redBorder"}`}
+                name="dateAquired"
+                value={values.dateAquired || ""}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="formWrapper">
+              <Button
+                as="button"
+                buttonStyle="primaryButton"
+                onClick={handleSubmit}
+              >
+                Add Inventory
+              </Button>
+            </div>
+          </form>
         </div>
-        <div className="formWrapper">
-          <label htmlFor="Company Name" className="formLabel">
-            Company Name
-          </label>
-          <small
-            style={
-              errors.softwareCompany
-                ? { visibility: "visible", color: "red" }
-                : { visibility: "hidden" }
-            }
-          >
-            * {errors.softwareCompany}
-          </small>
-          <input
-            type="text"
-            className={`formInput ${errors.softwareCompany && "redBorder"}`}
-            name="softwareCompany"
-            value={values.softwareCompany || ""}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="formWrapper">
-          <label htmlFor="Software Name" className="formLabel">
-            Serial Number
-          </label>
-          <small
-            style={
-              errors.serialNumber
-                ? { visibility: "visible", color: "red" }
-                : { visibility: "hidden" }
-            }
-          >
-            * {errors.serialNumber}
-          </small>
-          <input
-            type="text"
-            className={`formInput ${errors.serialNumber && "redBorder"}`}
-            name="serialNumber"
-            value={values.serialNumber || ""}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="formWrapper">
-          <label htmlFor="Date Aquired" className="formLabel">
-            Date Aquired
-          </label>
-          <small
-            style={
-              errors.dateAquired
-                ? { visibility: "visible", color: "red" }
-                : { visibility: "hidden" }
-            }
-          >
-            * {errors.dateAquired}
-          </small>
-          <input
-            type="date"
-            className={`formInput ${errors.dateAquired && "redBorder"}`}
-            name="dateAquired"
-            value={values.dateAquired || ""}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="formWrapper">
-          <Button
-            as="button"
-            buttonStyle="primaryButton"
-            onClick={handleSubmit}
-          >
-            Add Inventory
-          </Button>
-        </div>
-      </form>
-      <Button as={Link} to="/all" buttonStyle="primaryButton">
-        Inventory List
-      </Button>
+      </div>
     </section>
   );
 };
