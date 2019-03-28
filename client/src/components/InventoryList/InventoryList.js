@@ -28,6 +28,7 @@ const IventoryList = ({ inventory, fetchInventory }) => {
           {inventory.map(software => (
             <InventoryCard
               key={software.id}
+              softwareID={software.id}
               softwareName={software.softwareName}
               softwareCompany={software.softwareCompany}
               serialNumber={software.serialNumber}

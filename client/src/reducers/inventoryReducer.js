@@ -1,5 +1,9 @@
 import _ from "lodash";
-import { CREATE_INVENTORY, FETCH_INVENTORY } from "../actions/types";
+import {
+  CREATE_INVENTORY,
+  EDIT_INVENTORY,
+  FETCH_INVENTORY
+} from "../actions/types";
 
 const initialState = {};
 
@@ -14,6 +18,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         ..._.mapKeys(action.payload, "id")
+      };
+    case EDIT_INVENTORY:
+      return {
+        ...state,
+        [action.payload.id]: action.payload
       };
     default:
       return state;

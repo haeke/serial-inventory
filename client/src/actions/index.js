@@ -55,9 +55,10 @@ export const fetchInventory = () => async dispatch => {
 };
 
 // Used to open and close the Modal component
-export const openModal = () => dispatch => {
+export const openModal = softwareID => dispatch => {
   return dispatch({
-    type: OPEN_MODAL
+    type: OPEN_MODAL,
+    payload: softwareID
   });
 };
 export const closeModal = () => dispatch => {

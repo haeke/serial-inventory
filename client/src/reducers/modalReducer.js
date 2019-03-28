@@ -10,7 +10,8 @@ export default (state = initialState, action) => {
     case OPEN_MODAL:
       return {
         ...state,
-        openModal: true
+        openModal: true,
+        inventoryItem: action.payload
       };
     case CLOSE_MODAL:
       return {
