@@ -45,9 +45,9 @@ function GhostNav({ pageOffset }) {
             </Button>
           </li>
           <li className="listItem">
-            <Button as="a" href="#about">
-              Contact
-            </Button>
+            <Link to="/all" className="logoLink">
+              All Software
+            </Link>
           </li>
         </ul>
       </div>

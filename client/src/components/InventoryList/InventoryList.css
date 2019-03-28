@@ -1,0 +1,8 @@
+.inventoryListContainer {
+  min-height: 70vh;
+  background: var(--brandColor);
+}
+
+.inventoryListMargin {
+  margin-top: 100px;
+}

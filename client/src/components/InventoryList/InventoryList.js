@@ -5,6 +5,8 @@ import { fetchInventory } from "../../actions/index";
 
 import InventoryCard from "../InventoryCard/InventoryCard";
 
+import "./InventoryList.css";
+
 const IventoryList = ({ inventory, fetchInventory }) => {
   // We want to call useEffect when the inventory prop does not have any items inside
   useEffect(() => {
@@ -20,16 +22,20 @@ const IventoryList = ({ inventory, fetchInventory }) => {
     );
   }
   return (
-    <section className="container" style={{ marginTop: "100px" }}>
-      {inventory.map(software => (
-        <InventoryCard
-          key={software.id}
-          softwareName={software.softwareName}
-          softwareCompany={software.softwareCompany}
-          serialNumber={software.serialNumber}
-          dateAquired={software.dateAquired}
-        />
-      ))}
+    <section className="inventoryListContainer">
+      <div className="container">
+        <div className="inventoryListMargin">
+          {inventory.map(software => (
+            <InventoryCard
+              key={software.id}
+              softwareName={software.softwareName}
+              softwareCompany={software.softwareCompany}
+              serialNumber={software.serialNumber}
+              dateAquired={software.dateAquired}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
