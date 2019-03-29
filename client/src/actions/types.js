@@ -5,3 +5,5 @@ export const DELETE_INVENTORY_ITEM = "DELETE_INVENTORY_ITEM";
 
 export const OPEN_MODAL = "OPEN_MODAL";
 export const CLOSE_MODAL = "CLOSE_MODAL";
+// Boolean value that will determine when to conditionally render the edit form
+export const EDIT_MODE = "EDIT_MODE";

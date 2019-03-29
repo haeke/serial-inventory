@@ -6,16 +6,25 @@ import { Link } from "react-router-dom";
 import {
   openModal,
   closeModal,
+  editMode,
   deleteSoftwareItem,
   fetchInventory
 } from "../../actions/index";
 
 import Button from "../Button/Button";
+import EditForm from "../EditForm/EditForm";
 
 import "./Modal.css";
 
-const Modal = ({ closeModal, modal, deleteSoftwareItem, fetchInventory }) => {
-  const { inventoryItem } = modal;
+const Modal = ({
+  closeModal,
+  editMode,
+  modal,
+  deleteSoftwareItem,
+  fetchInventory,
+  props
+}) => {
+  const { inventoryItem, edit_mode } = modal;
 
   const handleDelete = () => {
     // I'm using a promise chain to make sure that the actions are called in order.
@@ -27,7 +36,7 @@ const Modal = ({ closeModal, modal, deleteSoftwareItem, fetchInventory }) => {
 
   const handleEdit = () => {
     // Navigate to the Edit page pass the object that we are going to modify to the form.
-    closeModal();
+    editMode();
   };
   if (modal.openModal === false) {
     return <React.Fragment />;
@@ -49,30 +58,35 @@ const Modal = ({ closeModal, modal, deleteSoftwareItem, fetchInventory }) => {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12">
-              <h1>Company Name: {inventoryItem.softwareCompany}</h1>
-              <h1>Product Name: {inventoryItem.softwareName}</h1>
-              <h2>Serial Number: {inventoryItem.serialNumber}</h2>
-              <h2>Aquired: {inventoryItem.dateAquired}</h2>
-            </div>
-            <div className="col-md-12">
-              <Button
-                as={Link}
-                to="/edit"
-                buttonStyle="editButton"
-                onClick={handleEdit}
-              >
-                Edit
-              </Button>
-              <Button
-                as={Link}
-                to="/all"
-                onClick={handleDelete}
-                buttonStyle="deleteButton"
-              >
-                Delete
-              </Button>
-            </div>
+            {edit_mode ? (
+              <EditForm />
+            ) : (
+              <React.Fragment>
+                <div className="col-md-12">
+                  <h1>Company Name: {inventoryItem.softwareCompany}</h1>
+                  <h1>Product Name: {inventoryItem.softwareName}</h1>
+                  <h2>Serial Number: {inventoryItem.serialNumber}</h2>
+                  <h2>Aquired: {inventoryItem.dateAquired}</h2>
+                </div>
+                <div className="col-md-12">
+                  <Button
+                    as="button"
+                    buttonStyle="editButton"
+                    onClick={handleEdit}
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    as={Link}
+                    to="/all"
+                    onClick={handleDelete}
+                    buttonStyle="deleteButton"
+                  >
+                    Delete
+                  </Button>
+                </div>
+              </React.Fragment>
+            )}
           </div>
         </div>
       </div>
@@ -87,5 +101,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { openModal, closeModal, deleteSoftwareItem, fetchInventory }
+  { openModal, editMode, closeModal, deleteSoftwareItem, fetchInventory }
 )(Modal);

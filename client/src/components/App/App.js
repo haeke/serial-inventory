@@ -6,7 +6,6 @@ import Home from "../Home/Home";
 import GhostNav from "../GhostNav/GhostNav";
 import InventoryForm from "../InventoryForm/InventoryForm";
 import InventoryList from "../InventoryList/InventoryList";
-import EditForm from "../EditForm/EditForm";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
 
@@ -20,7 +19,6 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/add" exact component={InventoryForm} />
             <Route path="/all" exact component={InventoryList} />
-            <Route path="/edit" exact component={EditForm} />
           </Switch>
           <Footer />
           <Modal />

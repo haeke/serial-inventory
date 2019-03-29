@@ -1,24 +1,24 @@
 {
   "inventory": [
     {
-      "softwareName": "Office 2019",
+      "softwareName": "Office 2020",
       "softwareCompany": "Microsoft",
-      "serialNumber": "123-123-4124",
-      "dateAquired": "2019-01-01",
+      "serialNumber": "111-222-333",
+      "dateAquired": "2020-10-02",
       "id": "100ac83f-1837-459a-a71a-f3f5e4b588e6"
     },
     {
-      "softwareName": "Acrobat",
+      "softwareName": "Acrobat 2012",
       "softwareCompany": "Adobe",
-      "serialNumber": "12314-33928-aiow28",
-      "dateAquired": "2019-01-01",
+      "serialNumber": "33304-2-01393",
+      "dateAquired": "2013-09-13",
       "id": "e76e57ef-bbd6-4cd9-8061-6f66dbc8e42c"
     },
     {
-      "softwareName": "AutoCAD 2019",
+      "softwareName": "AutoCAD 2021",
       "softwareCompany": "AutoDesk",
-      "serialNumber": "12309-23223-12392",
-      "dateAquired": "2019-04-01",
+      "serialNumber": "12309-23223-12394",
+      "dateAquired": "2019-03-29",
       "id": "ac4737e6-ceb6-4493-9d08-3eb6bdeff212"
     },
     {
@@ -34,6 +34,13 @@
       "serialNumber": "12340-123304-12381",
       "dateAquired": "2019-01-01",
       "id": "a4665d0d-c845-453c-8059-f70b127e5f0f"
+    },
+    {
+      "softwareName": "ES6 For Everyone",
+      "softwareCompany": "Wes Bos As A Service",
+      "serialNumber": "123123-321312-12312",
+      "dateAquired": "2019-01-01",
+      "id": "a47af6cc-5b8e-4af4-a993-e28117bf4fe6"
     }
   ]
 }

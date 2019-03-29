@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { validate } from "../../utils/validate";
 import { connect } from "react-redux";
-import { editInventory } from "../../actions/index";
+import { editInventory, editMode, closeModal } from "../../actions/index";
 
 import Button from "../Button/Button";
 
 import "./EditForm.css";
 
-const EditForm = ({ modal, editInventory }) => {
+const EditForm = ({ modal, editMode, closeModal, editInventory }) => {
   const { inventoryItem } = modal;
 
   const { values, errors, handleChange, handleSubmit } = useForm(
@@ -18,7 +19,9 @@ const EditForm = ({ modal, editInventory }) => {
 
   function editItem() {
     // pass the values that we want to update
-    editInventory(inventoryItem.id, values);
+    editInventory(inventoryItem.id, values)
+      .then(() => editMode())
+      .then(() => closeModal());
   }
   return (
     <section className="editFormContainer">
@@ -112,11 +115,12 @@ const EditForm = ({ modal, editInventory }) => {
             </div>
             <div className="formWrapper">
               <Button
-                as="button"
+                as={Link}
+                to="/all"
                 buttonStyle="primaryButton"
                 onClick={handleSubmit}
               >
-                Add Inventory
+                Edit Item
               </Button>
             </div>
           </form>
@@ -132,5 +136,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { editInventory }
+  { editInventory, editMode, closeModal }
 )(EditForm);

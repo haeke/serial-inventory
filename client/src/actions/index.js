@@ -4,7 +4,8 @@ import {
   OPEN_MODAL,
   CLOSE_MODAL,
   FETCH_INVENTORY,
-  DELETE_INVENTORY_ITEM
+  DELETE_INVENTORY_ITEM,
+  EDIT_MODE
 } from "./types";
 import uuid from "random-uuid-v4";
 
@@ -80,5 +81,12 @@ export const openModal = softwareID => dispatch => {
 export const closeModal = () => dispatch => {
   return dispatch({
     type: CLOSE_MODAL
+  });
+};
+
+// Set the Modal to edit Mode so that we can render the edit form
+export const editMode = () => dispatch => {
+  return dispatch({
+    type: EDIT_MODE
   });
 };
