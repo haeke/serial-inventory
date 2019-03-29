@@ -23,7 +23,7 @@ export const createInventory = formValues => async dispatch => {
     console.error(error);
   }
 };
-
+// Responsible for editing a software item's fields in the inventory reducer, we just need to make a patch request to /inventory/softwareID to update the fields that need to change (Don't use a put request unless you want to replace all fields).
 export const editInventory = (inventoryID, formValues) => async dispatch => {
   try {
     // Create a patch request to update the Form Value items.
@@ -41,7 +41,7 @@ export const editInventory = (inventoryID, formValues) => async dispatch => {
   }
 };
 
-// Responsible for getting all of the items inside of the json-server
+// Responsible for getting all of the items inside of the json-server, we just need to make a request to the /inventory route.
 export const fetchInventory = () => async dispatch => {
   try {
     let response = await inventory.get("/inventory");
@@ -55,7 +55,7 @@ export const fetchInventory = () => async dispatch => {
   }
 };
 
-// Responsible for deleting an item from the json-server
+// Responsible for deleting an item from the json-server, we just need to pass the softwareID to the redux store to remove the item from the inventory Reducer and send a delete request to the json-server database to remove the item.
 export const deleteSoftwareItem = softwareID => async dispatch => {
   try {
     await inventory.delete(`/inventory/${softwareID}`);
@@ -64,7 +64,9 @@ export const deleteSoftwareItem = softwareID => async dispatch => {
       type: DELETE_INVENTORY_ITEM,
       payload: softwareID
     });
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 // Used to open and close the Modal component

@@ -3,14 +3,26 @@ import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { openModal, closeModal } from "../../actions/index";
+import {
+  openModal,
+  closeModal,
+  deleteSoftwareItem,
+  fetchInventory
+} from "../../actions/index";
 
 import Button from "../Button/Button";
 
 import "./Modal.css";
 
-const Modal = ({ closeModal, modal }) => {
+const Modal = ({ closeModal, modal, deleteSoftwareItem, fetchInventory }) => {
   const { inventoryItem } = modal;
+
+  const handleDelete = () => {
+    deleteSoftwareItem(inventoryItem.id)
+      .then(() => fetchInventory())
+      .then(() => closeModal())
+      .catch(error => console.error(error));
+  };
   if (modal.openModal === false) {
     return <React.Fragment />;
   }
@@ -41,7 +53,7 @@ const Modal = ({ closeModal, modal }) => {
               <Button as={Link} to="/edit" buttonStyle="modalButton">
                 Edit
               </Button>
-              <Button as={Link} to="/all" onClick={deleteSoftware}>
+              <Button as={Link} to="/all" onClick={handleDelete}>
                 Delete
               </Button>
             </div>
@@ -59,5 +71,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { openModal, closeModal }
+  { openModal, closeModal, deleteSoftwareItem, fetchInventory }
 )(Modal);

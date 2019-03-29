@@ -12,7 +12,7 @@ import "./index.css";
 import App from "./components/App/App";
 
 // create an object that contains all the middleware to be used
-const middleware = [logger, reduxThunk];
+const middleware = [reduxThunk, logger];
 
 // create the store object
 const store = createStore(

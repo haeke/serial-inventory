@@ -19,7 +19,6 @@ const InventoryForm = ({ createInventory }) => {
   );
 
   function addInventory() {
-    console.log("inventory item added.");
     // pass the values object to the createInventory action
     createInventory(values);
   }

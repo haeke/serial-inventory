@@ -13,7 +13,7 @@ const IventoryList = ({ inventory, fetchInventory }) => {
     if (Object.keys(inventory).length === 0) {
       fetchInventory();
     }
-  }, []);
+  }, [inventory]);
   if (inventory.length < 0) {
     return (
       <div>
