@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { openModal, closeModal } from "../../actions/index";
 
@@ -35,6 +36,14 @@ const Modal = ({ closeModal, modal }) => {
               <h1>Product Name: {inventoryItem.softwareName}</h1>
               <h2>Serial Number: {inventoryItem.serialNumber}</h2>
               <h2>Aquired: {inventoryItem.dateAquired}</h2>
+            </div>
+            <div className="col-md-12">
+              <Button as={Link} to="/edit" buttonStyle="modalButton">
+                Edit
+              </Button>
+              <Button as={Link} to="/all" onClick={deleteSoftware}>
+                Delete
+              </Button>
             </div>
           </div>
         </div>

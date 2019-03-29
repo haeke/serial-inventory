@@ -3,7 +3,8 @@ import {
   EDIT_INVENTORY,
   OPEN_MODAL,
   CLOSE_MODAL,
-  FETCH_INVENTORY
+  FETCH_INVENTORY,
+  DELETE_INVENTORY_ITEM
 } from "./types";
 import uuid from "random-uuid-v4";
 
@@ -52,6 +53,18 @@ export const fetchInventory = () => async dispatch => {
   } catch (error) {
     console.error(error);
   }
+};
+
+// Responsible for deleting an item from the json-server
+export const deleteSoftwareItem = softwareID => async dispatch => {
+  try {
+    await inventory.delete(`/inventory/${softwareID}`);
+
+    dispatch({
+      type: DELETE_INVENTORY_ITEM,
+      payload: softwareID
+    });
+  } catch (error) {}
 };
 
 // Used to open and close the Modal component
