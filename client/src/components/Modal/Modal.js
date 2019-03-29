@@ -21,10 +21,17 @@ const Modal = ({
   editMode,
   modal,
   deleteSoftwareItem,
-  fetchInventory,
-  props
+  fetchInventory
 }) => {
   const { inventoryItem, edit_mode } = modal;
+
+  const handleClose = () => {
+    closeModal();
+    // Check to see if we are in edit mode if we are then we need to set the mode to false when closing the modal.
+    if (edit_mode) {
+      editMode();
+    }
+  };
 
   const handleDelete = () => {
     // I'm using a promise chain to make sure that the actions are called in order.
@@ -50,7 +57,7 @@ const Modal = ({
               <h1 className="modalHeader">Manage Software</h1>
               <Button
                 as="button"
-                onClick={closeModal}
+                onClick={handleClose}
                 buttonStyle="modalButton"
               >
                 <i className="fas fa-times closeIcon" />

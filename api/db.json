@@ -1,16 +1,16 @@
 {
   "inventory": [
     {
-      "softwareName": "Office 2020",
-      "softwareCompany": "Microsoft",
-      "serialNumber": "111-222-333",
-      "dateAquired": "2020-10-02",
+      "softwareName": "Office 2021",
+      "softwareCompany": "Microsoft Corporation",
+      "serialNumber": "111-222-3333",
+      "dateAquired": "1998-10-02",
       "id": "100ac83f-1837-459a-a71a-f3f5e4b588e6"
     },
     {
-      "softwareName": "Acrobat 2012",
+      "softwareName": "Acrobat 2013",
       "softwareCompany": "Adobe",
-      "serialNumber": "33304-2-01393",
+      "serialNumber": "33304-2-01392",
       "dateAquired": "2013-09-13",
       "id": "e76e57ef-bbd6-4cd9-8061-6f66dbc8e42c"
     },
@@ -34,13 +34,6 @@
       "serialNumber": "12340-123304-12381",
       "dateAquired": "2019-01-01",
       "id": "a4665d0d-c845-453c-8059-f70b127e5f0f"
-    },
-    {
-      "softwareName": "ES6 For Everyone",
-      "softwareCompany": "Wes Bos As A Service",
-      "serialNumber": "123123-321312-12312",
-      "dateAquired": "2019-01-01",
-      "id": "a47af6cc-5b8e-4af4-a993-e28117bf4fe6"
     }
   ]
 }

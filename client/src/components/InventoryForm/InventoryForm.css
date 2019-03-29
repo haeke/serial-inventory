@@ -1,6 +1,6 @@
 .inventoryFormContainer {
   min-height: 70vh;
-  background: var(--brandColor);
+  background: var(--altBrandColor);
 }
 
 .inventoryFormHeader {
