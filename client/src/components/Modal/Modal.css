@@ -53,6 +53,35 @@
   float: right;
 }
 
+.editButton {
+  border: none;
+  background: var(--brandColor);
+  color: var(--mainWhite);
+  padding: 5px;
+  margin: 5px;
+}
+
+a .editButton {
+  text-decoration: none;
+}
+
+.editButton:hover {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+
+.deleteButton {
+  border: none;
+  background: red;
+  color: var(--mainWhite);
+  padding: 5px;
+}
+
+.deleteButton:hover {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+
 .closeIcon {
   font-size: 1.7rem;
 }

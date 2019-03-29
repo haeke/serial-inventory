@@ -14,11 +14,15 @@ const IventoryList = ({ inventory, fetchInventory }) => {
       fetchInventory();
     }
   }, [inventory]);
-  if (inventory.length < 0) {
+  if (inventory.length <= 0) {
     return (
-      <div>
-        <h1>No Items to show</h1>
-      </div>
+      <section className="inventoryListContainer">
+        <div className="container">
+          <div className="inventoryListMargin">
+            <h1 className="text-center">No Items to show</h1>
+          </div>
+        </div>
+      </section>
     );
   }
   return (

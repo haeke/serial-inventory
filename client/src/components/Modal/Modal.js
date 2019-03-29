@@ -18,10 +18,16 @@ const Modal = ({ closeModal, modal, deleteSoftwareItem, fetchInventory }) => {
   const { inventoryItem } = modal;
 
   const handleDelete = () => {
+    // I'm using a promise chain to make sure that the actions are called in order.
     deleteSoftwareItem(inventoryItem.id)
       .then(() => fetchInventory())
       .then(() => closeModal())
       .catch(error => console.error(error));
+  };
+
+  const handleEdit = () => {
+    // Navigate to the Edit page pass the object that we are going to modify to the form.
+    closeModal();
   };
   if (modal.openModal === false) {
     return <React.Fragment />;
@@ -50,10 +56,20 @@ const Modal = ({ closeModal, modal, deleteSoftwareItem, fetchInventory }) => {
               <h2>Aquired: {inventoryItem.dateAquired}</h2>
             </div>
             <div className="col-md-12">
-              <Button as={Link} to="/edit" buttonStyle="modalButton">
+              <Button
+                as={Link}
+                to="/edit"
+                buttonStyle="editButton"
+                onClick={handleEdit}
+              >
                 Edit
               </Button>
-              <Button as={Link} to="/all" onClick={handleDelete}>
+              <Button
+                as={Link}
+                to="/all"
+                onClick={handleDelete}
+                buttonStyle="deleteButton"
+              >
                 Delete
               </Button>
             </div>

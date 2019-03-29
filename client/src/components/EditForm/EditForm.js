@@ -1,32 +1,30 @@
 import React from "react";
-import { connect } from "react-redux";
 import { useForm } from "../../hooks/useForm";
 import { validate } from "../../utils/validate";
-import { createInventory } from "../../actions/index";
+import { connect } from "react-redux";
+import { editInventory } from "../../actions/index";
 
 import Button from "../Button/Button";
 
-import "./InventoryForm.css";
+import "./EditForm.css";
 
-// The useForm hook allows us to reuse state inside of our form when we want to use a controlled form. We are using redux to provide the app with a global inventory state object for now but in the future there will be other global state objects.
+const EditForm = ({ modal, editInventory }) => {
+  const { inventoryItem } = modal;
 
-const InventoryForm = ({ createInventory }) => {
-  // get the values from the useForm hook
   const { values, errors, handleChange, handleSubmit } = useForm(
-    addInventory,
+    editItem,
     validate
   );
 
-  function addInventory() {
-    // pass the values object to the createInventory action
-    createInventory(values);
+  function editItem() {
+    // pass the values that we want to update
+    editInventory(inventoryItem.id, values);
   }
-
   return (
-    <section className="inventoryFormContainer">
+    <section className="editFormContainer">
       <div className="container">
         <div className="row">
-          <h1 className="inventoryFormHeader">Add New Software</h1>
+          <h1 className="inventoryFormHeader">Edit Software Item</h1>
           <form onSubmit={handleSubmit} className="formContainer">
             <div className="formWrapper">
               <label htmlFor="Software Name" className="formLabel">
@@ -45,7 +43,7 @@ const InventoryForm = ({ createInventory }) => {
                 type="text"
                 className={`formInput ${errors.softwareName && "redBorder"}`}
                 name="softwareName"
-                value={values.softwareName || ""}
+                value={values.softwareName || inventoryItem.softwareName}
                 onChange={handleChange}
               />
             </div>
@@ -66,7 +64,7 @@ const InventoryForm = ({ createInventory }) => {
                 type="text"
                 className={`formInput ${errors.softwareCompany && "redBorder"}`}
                 name="softwareCompany"
-                value={values.softwareCompany || ""}
+                value={values.softwareCompany || inventoryItem.softwareCompany}
                 onChange={handleChange}
               />
             </div>
@@ -87,7 +85,7 @@ const InventoryForm = ({ createInventory }) => {
                 type="text"
                 className={`formInput ${errors.serialNumber && "redBorder"}`}
                 name="serialNumber"
-                value={values.serialNumber || ""}
+                value={values.serialNumber || inventoryItem.serialNumber}
                 onChange={handleChange}
               />
             </div>
@@ -108,7 +106,7 @@ const InventoryForm = ({ createInventory }) => {
                 type="date"
                 className={`formInput ${errors.dateAquired && "redBorder"}`}
                 name="dateAquired"
-                value={values.dateAquired || ""}
+                value={values.dateAquired || inventoryItem.dateAquired}
                 onChange={handleChange}
               />
             </div>
@@ -128,8 +126,11 @@ const InventoryForm = ({ createInventory }) => {
   );
 };
 
-// use the connect function to mapStateToProps and mapDispatchToProps
+const mapStateToProps = state => ({
+  modal: state.modal
+});
+
 export default connect(
-  null,
-  { createInventory }
-)(InventoryForm);
+  mapStateToProps,
+  { editInventory }
+)(EditForm);

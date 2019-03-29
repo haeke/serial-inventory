@@ -25,6 +25,7 @@ export const createInventory = formValues => async dispatch => {
 };
 // Responsible for editing a software item's fields in the inventory reducer, we just need to make a patch request to /inventory/softwareID to update the fields that need to change (Don't use a put request unless you want to replace all fields).
 export const editInventory = (inventoryID, formValues) => async dispatch => {
+  console.log("the inventory id ", inventoryID);
   try {
     // Create a patch request to update the Form Value items.
     let response = await inventory.patch(
