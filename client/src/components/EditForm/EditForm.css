@@ -1,0 +1,8 @@
+.editFormContainer {
+  padding: 20px 0;
+}
+
+.editFormHeader {
+  text-align: center;
+  color: var(--altBrandColor);
+}

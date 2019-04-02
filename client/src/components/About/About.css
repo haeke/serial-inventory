@@ -1,0 +1,14 @@
+.aboutContainer {
+  padding: 20px 0;
+}
+.aboutHeader {
+  font-size: 50px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.aboutParagraph {
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+}

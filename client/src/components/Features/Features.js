@@ -1,7 +1,6 @@
 import React from "react";
 
 import Card from "../Card/Card";
-import Pricing from "../Pricing/Pricing";
 
 import "./Features.css";
 
@@ -33,9 +32,6 @@ const Features = () => {
           >
             <i className="fab fa-accusoft featuredIcon" />
           </Card>
-        </div>
-        <div className="row">
-          <Pricing />
         </div>
       </div>
     </section>
