@@ -6,7 +6,7 @@ import "./Pricing.css";
 
 const Pricing = () => {
   return (
-    <div className="pricingContainer">
+    <section className="pricingContainer">
       <div className="row">
         <div className="col-md-8 col-md-offset-2 col-xs-12">
           <h1 className="pricingHeader">Pricing Table</h1>
@@ -64,7 +64,7 @@ const Pricing = () => {
           </PricingCard>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
