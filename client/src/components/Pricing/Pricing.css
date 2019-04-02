@@ -1,3 +1,7 @@
+.pricingContainer {
+  min-height: 50vh;
+  padding: 20px 0;
+}
 .pricingHeader {
   text-align: center;
   font-size: 50px;
