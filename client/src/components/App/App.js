@@ -13,16 +13,18 @@ const App = () => {
   return (
     <main className="container-fluid">
       <div className="row">
-        <Router>
-          <GhostNav pageOffset={60} />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/add" exact component={InventoryForm} />
-            <Route path="/all" exact component={InventoryList} />
-          </Switch>
-          <Footer />
-          <Modal />
-        </Router>
+        <div className="appRow">
+          <Router>
+            <GhostNav pageOffset={60} />
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/add" exact component={InventoryForm} />
+              <Route path="/all" exact component={InventoryList} />
+            </Switch>
+            <Footer />
+            <Modal />
+          </Router>
+        </div>
       </div>
     </main>
   );

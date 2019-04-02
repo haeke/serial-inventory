@@ -16,6 +16,20 @@ body {
   box-sizing: border-box;
 }
 
+.appRow {
+  width: 99vw !important;
+}
+
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
