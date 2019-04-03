@@ -1,6 +1,6 @@
 /* disable scrolling by setting the overflow attribute to hidden */
 /* body,
-#modal {
+#modalDialog {
   overflow: hidden;
 } */
 
@@ -30,8 +30,8 @@
   background: #cccccc;
   padding: 10px;
   border-radius: 3px;
-  width: 90vw;
-  height: 90vh;
+  min-width: 40vw;
+  min-height: 40vh;
 }
 
 .modalHeaderContainer {
@@ -52,25 +52,17 @@
   margin: 0;
   float: right;
 }
-
-.editButton {
-  border: none;
-  background: var(--brandColor);
-  color: var(--mainWhite);
-  padding: 5px;
-  margin: 5px;
-}
 /* Manage Content  / Manage component styling */
 .manageContainer {
   display: flex;
-  height: 90vh;
+  min-height: 40vh;
 }
 
 .manageContent {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-left: 1px solid black;
 }
@@ -84,25 +76,35 @@
 
 /* end manage component styling */
 
+.editButton {
+  border: none;
+  background: transparent;
+  font-size: 2.1rem;
+  color: var(--mainWhite);
+  padding: 5px;
+  margin: 5px;
+}
+
 a .editButton {
   text-decoration: none;
 }
 
 .editButton:hover {
   text-decoration: none;
-  color: var(--mainWhite);
+  color: var(--brandColor);
 }
 
 .deleteButton {
   border: none;
-  background: red;
-  color: var(--mainWhite);
+  background: transparent;
+  color: #fc4040;
+  font-size: 2.1rem;
   padding: 5px;
 }
 
 .deleteButton:hover {
   text-decoration: none;
-  color: var(--mainWhite);
+  color: #ff5e5e;
 }
 
 .closeIcon {

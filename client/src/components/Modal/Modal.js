@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 import {
   openModal,
@@ -72,7 +71,7 @@ const Modal = ({
                     <Button
                       as="button"
                       buttonStyle="deleteButton"
-                      onClick={handleEdit}
+                      onClick={handleDelete}
                     >
                       <i class="far fa-trash-alt" />
                     </Button>
