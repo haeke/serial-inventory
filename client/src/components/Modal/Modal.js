@@ -70,17 +70,17 @@ const Modal = ({
                   <div className="buttonGroup">
                     <Button
                       as="button"
-                      buttonStyle="deleteButton"
-                      onClick={handleDelete}
-                    >
-                      <i class="far fa-trash-alt" />
-                    </Button>
-                    <Button
-                      as="button"
                       buttonStyle="editButton"
                       onClick={handleEdit}
                     >
                       <i class="fas fa-cog" />
+                    </Button>
+                    <Button
+                      as="button"
+                      buttonStyle="deleteButton"
+                      onClick={handleDelete}
+                    >
+                      <i class="far fa-trash-alt" />
                     </Button>
                   </div>
                   <div className="manageContent">
@@ -95,17 +95,17 @@ const Modal = ({
                     <div className="buttonGroup">
                       <Button
                         as="button"
-                        buttonStyle="deleteButton"
-                        onClick={handleEdit}
-                      >
-                        <i class="far fa-trash-alt" />
-                      </Button>
-                      <Button
-                        as="button"
                         buttonStyle="editButton"
                         onClick={handleEdit}
                       >
                         <i class="fas fa-cog" />
+                      </Button>
+                      <Button
+                        as="button"
+                        buttonStyle="deleteButton"
+                        onClick={handleEdit}
+                      >
+                        <i class="far fa-trash-alt" />
                       </Button>
                     </div>
                     <div className="manageContent">
