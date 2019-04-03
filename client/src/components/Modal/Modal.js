@@ -66,31 +66,56 @@ const Modal = ({
           </div>
           <div className="row">
             {edit_mode ? (
-              <EditForm />
+              <div className="col-md-12">
+                <div className="manageContainer">
+                  <div className="buttonGroup">
+                    <Button
+                      as="button"
+                      buttonStyle="deleteButton"
+                      onClick={handleEdit}
+                    >
+                      <i class="far fa-trash-alt" />
+                    </Button>
+                    <Button
+                      as="button"
+                      buttonStyle="editButton"
+                      onClick={handleEdit}
+                    >
+                      <i class="fas fa-cog" />
+                    </Button>
+                  </div>
+                  <div className="manageContent">
+                    <EditForm />
+                  </div>
+                </div>
+              </div>
             ) : (
               <React.Fragment>
                 <div className="col-md-12">
-                  <h1>Company Name: {inventoryItem.softwareCompany}</h1>
-                  <h1>Product Name: {inventoryItem.softwareName}</h1>
-                  <h2>Serial Number: {inventoryItem.serialNumber}</h2>
-                  <h2>Aquired: {inventoryItem.dateAquired}</h2>
-                </div>
-                <div className="col-md-12">
-                  <Button
-                    as="button"
-                    buttonStyle="editButton"
-                    onClick={handleEdit}
-                  >
-                    Edit
-                  </Button>
-                  <Button
-                    as={Link}
-                    to="/all"
-                    onClick={handleDelete}
-                    buttonStyle="deleteButton"
-                  >
-                    Delete
-                  </Button>
+                  <div className="manageContainer">
+                    <div className="buttonGroup">
+                      <Button
+                        as="button"
+                        buttonStyle="deleteButton"
+                        onClick={handleEdit}
+                      >
+                        <i class="far fa-trash-alt" />
+                      </Button>
+                      <Button
+                        as="button"
+                        buttonStyle="editButton"
+                        onClick={handleEdit}
+                      >
+                        <i class="fas fa-cog" />
+                      </Button>
+                    </div>
+                    <div className="manageContent">
+                      <h1>Company Name: {inventoryItem.softwareCompany}</h1>
+                      <h1>Product Name: {inventoryItem.softwareName}</h1>
+                      <h2>Serial Number: {inventoryItem.serialNumber}</h2>
+                      <h2>Aquired: {inventoryItem.dateAquired}</h2>
+                    </div>
+                  </div>
                 </div>
               </React.Fragment>
             )}

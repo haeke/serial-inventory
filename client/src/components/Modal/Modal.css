@@ -60,6 +60,29 @@
   padding: 5px;
   margin: 5px;
 }
+/* Manage Content  / Manage component styling */
+.manageContainer {
+  display: flex;
+  height: 90vh;
+}
+
+.manageContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-left: 1px solid black;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* end manage component styling */
 
 a .editButton {
   text-decoration: none;
