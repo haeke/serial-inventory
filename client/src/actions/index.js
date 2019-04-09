@@ -5,7 +5,8 @@ import {
   CLOSE_MODAL,
   FETCH_INVENTORY,
   DELETE_INVENTORY_ITEM,
-  EDIT_MODE
+  EDIT_MODE,
+  GET_ERRORS
 } from "./types";
 import uuid from "random-uuid-v4";
 
@@ -21,7 +22,11 @@ export const createInventory = formValues => async dispatch => {
       payload: response.data
     });
   } catch (error) {
-    console.error(error);
+    // dispatch the GET_ERRORS action
+    dispatch({
+      type: GET_ERRORS,
+      payload: { errors: "Could not create item" }
+    });
   }
 };
 // Responsible for editing a software item's fields in the inventory reducer, we just need to make a patch request to /inventory/softwareID to update the fields that need to change (Don't use a put request unless you want to replace all fields).
@@ -53,7 +58,10 @@ export const fetchInventory = () => async dispatch => {
       payload: response.data
     });
   } catch (error) {
-    console.error(error);
+    dispatch({
+      type: GET_ERRORS,
+      payload: { Error: "Could not get data." }
+    });
   }
 };
 
