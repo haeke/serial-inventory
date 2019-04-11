@@ -1,9 +1,19 @@
 const express = require("express");
 const morgan = require("morgan");
-
+const bodyParser = require("body-parser");
 const app = express();
 
+// require the list of routers
+const users = require("./routes/users");
+
 app.use(morgan("dev"));
+
+// body parser url encoded and json middleare
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// the users router
+app.use("/api/users", users);
 
 // Serve the statis assets if in production
 if (process.env.NODE_ENV === "production") {
