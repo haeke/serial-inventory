@@ -17,6 +17,7 @@ export const createInventory = formValues => async dispatch => {
   let newItem = { ...formValues, id: uuid() };
   try {
     let response = await inventory.post("/inventory", newItem);
+    console.log(response);
     dispatch({
       type: CREATE_INVENTORY,
       payload: response.data
@@ -52,7 +53,7 @@ export const editInventory = (inventoryID, formValues) => async dispatch => {
 export const fetchInventory = () => async dispatch => {
   try {
     let response = await inventory.get("/inventory");
-
+    console.log(response);
     dispatch({
       type: FETCH_INVENTORY,
       payload: response.data
