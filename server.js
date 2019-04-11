@@ -9,6 +9,7 @@ const app = express();
 
 // require the list of routers
 const users = require("./routes/users");
+const software = require("./routes/software");
 
 app.use(morgan("dev"));
 
@@ -23,7 +24,7 @@ require("./config/passport")(passport);
 
 // the users router
 app.use("/api/users", users);
-
+app.use("/api/software", software);
 // Serve the statis assets if in production
 if (process.env.NODE_ENV === "production") {
   // set a static folder

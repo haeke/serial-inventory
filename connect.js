@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 
 const connect = url =>
   mongoose.connect(url, {
-    userNewUrlParser: true
+    useNewUrlParser: true
   });
 
 module.exports = connect;
