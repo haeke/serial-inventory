@@ -15,23 +15,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
-
-/* .appRow {
-  width: 99vw !important;
-}
-
-.container-fluid {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-.row {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-} */
-
 .mainWhite {
   color: var(--mainWhite);
+}
+
+.brandColorBackground {
+  background: var(--brandColor);
 }
 
 h1 {

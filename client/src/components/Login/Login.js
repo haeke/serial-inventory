@@ -22,65 +22,69 @@ const Login = () => {
       <div className="container">
         <div className="loginWrapper">
           <div className="row">
-            <div className="col-md-5">
-              <div className="row">
-                <h1 className="registerHeader mainWhite">Login</h1>
+            <div className="col-md-12 brandColorBackground">
+              <div className="col-md-5 col-sm-12">
+                <div className="row">
+                  <h1 className="registerHeader mainWhite">Login</h1>
+                </div>
+                <form onSubmit={handleSubmit} className="formContainer">
+                  <div className="formWrapper">
+                    <label htmlFor="Email" className="formLabel">
+                      Email
+                    </label>
+                    <small
+                      style={
+                        errors.email
+                          ? { visibility: "visible", color: "red" }
+                          : { visibility: "hidden" }
+                      }
+                    >
+                      * {errors.email}
+                    </small>
+                    <input
+                      type="email"
+                      className={`formInput ${errors.email && "redBorder"}`}
+                      name="email"
+                      value={values.email || ""}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="formWrapper">
+                    <label htmlFor="Password">Password</label>
+                    <small
+                      style={
+                        errors.password
+                          ? { visibility: "visible", color: "red" }
+                          : { visibility: "hidden" }
+                      }
+                    />
+                    <input
+                      type="password"
+                      className={`formInput ${errors.password && "redBorder"}`}
+                      name="password"
+                      value={values.password || ""}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="formWrapper">
+                    <Button
+                      as="button"
+                      buttonStyle="primaryButton"
+                      onClick={handleSubmit}
+                    >
+                      Login
+                    </Button>
+                  </div>
+                </form>
               </div>
-              <form onSubmit={handleSubmit} className="formContainer">
-                <div className="formWrapper">
-                  <label htmlFor="Email" className="formLabel">
-                    Email
-                  </label>
-                  <small
-                    style={
-                      errors.email
-                        ? { visibility: "visible", color: "red" }
-                        : { visibility: "hidden" }
-                    }
-                  >
-                    * {errors.email}
-                  </small>
-                  <input
-                    type="email"
-                    className={`formInput ${errors.email && "redBorder"}`}
-                    name="email"
-                    value={values.email || ""}
-                    onChange={handleChange}
-                  />
+              <div className="col-md-7 col-sm-12">
+                <div className="loginFormWrapper text-right">
+                  <h1 className="loginFormHeader">Dont have an Account?</h1>
+                  <Link to="/" className="loginLink">
+                    Register Here
+                  </Link>
                 </div>
-                <div className="formWrapper">
-                  <label htmlFor="Password">Password</label>
-                  <small
-                    style={
-                      errors.password
-                        ? { visibility: "visible", color: "red" }
-                        : { visibility: "hidden" }
-                    }
-                  />
-                  <input
-                    type="password"
-                    className={`formInput ${errors.password && "redBorder"}`}
-                    name="password"
-                    value={values.password || ""}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="formWrapper">
-                  <Button
-                    as="button"
-                    buttonStyle="primaryButton"
-                    onClick={handleSubmit}
-                  >
-                    Login
-                  </Button>
-                </div>
-              </form>
-            </div>
-            <div className="loginFormWrapper">
-              <h1 className="loginFormHeader">Dont have an Account?</h1>
-              <Link to="/" className="loginLink">
-                Register Here
-              </Link>
+              </div>
             </div>
           </div>
         </div>
