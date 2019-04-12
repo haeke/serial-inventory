@@ -47,13 +47,38 @@ router.delete("/:id", async (req, res) => {
     //TODO - get the current user from the User model
     // Use the findById method to get the software item from the Software Model
     const software = await Software.findById(req.params.id);
-    // make sure the item is removed from the database before sending the message.
-    await software.remove();
+    try {
+      // make sure the item is removed from the database before sending the message.
+      await software.remove();
+    } catch (error) {
+      res.json({ software: "Software Item could not be found." });
+    }
     res.json({ software: "Software Item Deleted" });
   } catch (error) {
     res
       .sendStatus(404)
       .json({ softwarenotfound: "Software Item could not be deleted." });
+  }
+});
+
+//@route PATCH /api/software/:id
+//@desc PATCH request to update an existing software item
+//@access Public but will be converted to private.
+router.patch("/:id", async (req, res) => {
+  const { softwareName, softwareCompany, serialNumber, dateAquired } = req.body;
+  try {
+    // get the software item
+    await Software.findByIdAndUpdate(req.params.id, {
+      softwareName,
+      softwareCompany,
+      serialNumber,
+      dateAquired
+    });
+    res.json({ software: "Software Item updated." });
+  } catch (error) {
+    res
+      .sendStatus(404)
+      .json({ software: "Software Item Could not be updated" });
   }
 });
 
