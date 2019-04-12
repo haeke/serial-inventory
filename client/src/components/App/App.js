@@ -20,6 +20,7 @@ const App = () => {
               <Route path="/" exact component={Home} />
               <Route path="/add" exact component={InventoryForm} />
               <Route path="/all" exact component={InventoryList} />
+              <Route path="/login" exact component={Login} />
             </Switch>
             <Footer />
             <Modal />
