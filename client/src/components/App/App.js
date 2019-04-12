@@ -7,6 +7,7 @@ import GhostNav from "../GhostNav/GhostNav";
 import InventoryForm from "../InventoryForm/InventoryForm";
 import InventoryList from "../InventoryList/InventoryList";
 import Login from "../Login/Login";
+import Register from "../Register/Register";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
 
@@ -22,6 +23,7 @@ const App = () => {
               <Route path="/add" exact component={InventoryForm} />
               <Route path="/all" exact component={InventoryList} />
               <Route path="/login" exact component={Login} />
+              <Route path="/register" exact component={Register} />
             </Switch>
             <Footer />
             <Modal />

@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 
 import Button from "../Button/Button";
 
-import "./Login.css";
+import "./Register.css";
 
-const Login = () => {
+const Register = () => {
   const { values, errors, handleChange, handleSubmit } = useForm(
-    loginUser,
+    registerUser,
     validate
   );
 
-  function loginUser() {
+  function registerUser() {
     // TODO - pass the values to the action creator for creating a user.
-    console.log("called create user");
+    console.log("called register User");
   }
   return (
     <section className="loginContainer">
@@ -25,9 +25,30 @@ const Login = () => {
             <div className="col-md-12 brandColorBackground curvedEdges">
               <div className="col-md-5 col-sm-12">
                 <div className="row">
-                  <h1 className="mainWhite">Login</h1>
+                  <h1 className="mainWhite">Register</h1>
                 </div>
                 <form onSubmit={handleSubmit} className="formContainer">
+                  <div className="formWrapper">
+                    <label htmlFor="Name" className="formLabel">
+                      Name
+                    </label>
+                    <small
+                      style={
+                        errors.name
+                          ? { visibility: "visible", color: "red" }
+                          : { visibility: "hidden" }
+                      }
+                    >
+                      * {errors.name}
+                    </small>
+                    <input
+                      type="text"
+                      className={`formInput ${errors.name && "redBorder"}`}
+                      name="name"
+                      value={values.name || ""}
+                      onChange={handleChange}
+                    />
+                  </div>
                   <div className="formWrapper">
                     <label htmlFor="Email" className="formLabel">
                       Email
@@ -81,9 +102,9 @@ const Login = () => {
               </div>
               <div className="col-md-7 col-sm-12">
                 <div className="loginFormWrapper text-right">
-                  <h1 className="loginFormHeader">Dont have an Account?</h1>
-                  <Link to="/register" className="loginLink">
-                    Register Here
+                  <h1 className="loginFormHeader">Already Have an Account?</h1>
+                  <Link to="/login" className="loginLink">
+                    Login Here
                   </Link>
                 </div>
               </div>
@@ -95,4 +116,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
