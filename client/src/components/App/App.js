@@ -6,6 +6,7 @@ import Home from "../Home/Home";
 import GhostNav from "../GhostNav/GhostNav";
 import InventoryForm from "../InventoryForm/InventoryForm";
 import InventoryList from "../InventoryList/InventoryList";
+import Login from "../Login/Login";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
 

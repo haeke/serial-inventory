@@ -1,0 +1,32 @@
+.loginContainer {
+  min-height: 75vh;
+  background: #c46969;
+}
+
+.loginWrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginLink {
+  color: var(--mainWhite);
+  font-size: 30px;
+}
+
+.loginLink:hover {
+  color: var(--mainWhite);
+}
+
+.loginFormHeader {
+  margin: 0;
+}
+
+.loginFormWrapper {
+  background: var(--brandColor);
+  padding: 20px;
+  height: 400px;
+  width: 600px;
+  margin-left: 140px;
+}

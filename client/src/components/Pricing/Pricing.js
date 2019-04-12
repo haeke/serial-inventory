@@ -7,12 +7,12 @@ import "./Pricing.css";
 const Pricing = () => {
   return (
     <section className="pricingContainer">
-      <div className="row">
-        <div className="col-md-8 col-md-offset-2 col-xs-12">
-          <h1 className="pricingHeader">Pricing Table</h1>
-        </div>
-      </div>
       <div className="container">
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2 col-xs-12">
+            <h1 className="pricingHeader">Pricing Table</h1>
+          </div>
+        </div>
         <div className="row text-center">
           <PricingCard pricingHeader="Basic" price="$20 per month">
             <ul className="pricingList">

@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
 }
 
-.appRow {
+/* .appRow {
   width: 99vw !important;
 }
 
@@ -28,6 +28,10 @@ body {
 .row {
   margin-right: 0 !important;
   margin-left: 0 !important;
+} */
+
+.mainWhite {
+  color: var(--mainWhite);
 }
 
 h1 {
