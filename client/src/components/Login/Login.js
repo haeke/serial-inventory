@@ -20,72 +20,70 @@ const Login = () => {
   return (
     <section className="loginContainer">
       <div className="container">
-        <div className="loginWrapper">
-          <div className="row">
-            <div className="col-md-12 brandColorBackground curvedEdges">
-              <div className="col-md-5 col-sm-12">
-                <div className="row">
-                  <h1 className="mainWhite">Login</h1>
+        <div className="col-md-12">
+          {/* width: 900px */}
+          <div className="loginBackground">
+            {/* width: 500px */}
+            <div className="loginWhite">
+              <h1>Login</h1>
+              <form onSubmit={handleSubmit} className="loginForm">
+                <div className="formWrapper">
+                  <label htmlFor="Email" className="formLabel">
+                    Email
+                  </label>
+                  <small
+                    style={
+                      errors.email
+                        ? { visibility: "visible", color: "red" }
+                        : { visibility: "hidden" }
+                    }
+                  >
+                    * {errors.email}
+                  </small>
+                  <input
+                    type="email"
+                    className={`formInput ${errors.email && "redBorder"}`}
+                    name="email"
+                    value={values.email || ""}
+                    onChange={handleChange}
+                  />
                 </div>
-                <form onSubmit={handleSubmit} className="formContainer">
-                  <div className="formWrapper">
-                    <label htmlFor="Email" className="formLabel">
-                      Email
-                    </label>
-                    <small
-                      style={
-                        errors.email
-                          ? { visibility: "visible", color: "red" }
-                          : { visibility: "hidden" }
-                      }
-                    >
-                      * {errors.email}
-                    </small>
-                    <input
-                      type="email"
-                      className={`formInput ${errors.email && "redBorder"}`}
-                      name="email"
-                      value={values.email || ""}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="formWrapper">
-                    <label htmlFor="Password">Password</label>
-                    <small
-                      style={
-                        errors.password
-                          ? { visibility: "visible", color: "red" }
-                          : { visibility: "hidden" }
-                      }
-                    >
-                      * {errors.password}
-                    </small>
-                    <input
-                      type="password"
-                      className={`formInput ${errors.password && "redBorder"}`}
-                      name="password"
-                      value={values.password || ""}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="formWrapper">
-                    <Button
-                      as="button"
-                      buttonStyle="primaryButton"
-                      onClick={handleSubmit}
-                    >
-                      Login
-                    </Button>
-                  </div>
-                </form>
-              </div>
-              <div className="col-md-7 col-sm-12">
-                <div className="loginFormWrapper text-right">
-                  <h1 className="loginFormHeader">Dont have an Account?</h1>
-                  <Link to="/register" className="loginLink">
-                    Register Here
-                  </Link>
+                <div className="formWrapper">
+                  <label htmlFor="Password">Password</label>
+                  <small
+                    style={
+                      errors.password
+                        ? { visibility: "visible", color: "red" }
+                        : { visibility: "hidden" }
+                    }
+                  >
+                    * {errors.password}
+                  </small>
+                  <input
+                    type="password"
+                    className={`formInput ${errors.password && "redBorder"}`}
+                    name="password"
+                    value={values.password || ""}
+                    onChange={handleChange}
+                  />
                 </div>
+                <div className="formWrapper">
+                  <Button
+                    as="button"
+                    buttonStyle="loginButton"
+                    onClick={handleSubmit}
+                  >
+                    Login
+                  </Button>
+                </div>
+              </form>
+            </div>
+            <div className="registerWrapper">
+              <div className="loginFormWrapper text-right">
+                <h1 className="loginFormHeader">Dont have an Account?</h1>
+                <Link to="/register" className="loginLink">
+                  Register Here
+                </Link>
               </div>
             </div>
           </div>

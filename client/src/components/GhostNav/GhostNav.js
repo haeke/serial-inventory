@@ -35,6 +35,16 @@ function GhostNav({ pageOffset }) {
       <div className="links">
         <ul className="linkContainer">
           <li className="listItem">
+            <Link to="/login" className="logoLink">
+              Login
+            </Link>
+          </li>
+          <li className="listItem">
+            <Link to="/Register" className="logoLink">
+              Register
+            </Link>
+          </li>
+          <li className="listItem">
             <Link to="/add" className="logoLink">
               Add
             </Link>
