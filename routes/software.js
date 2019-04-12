@@ -39,6 +39,24 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//@route DELETE /api/software/:id
+//@desc DELETE request to remove a document from Software by the ID
+//@access Public but will be changed to Private
+router.delete("/:id", async (req, res) => {
+  try {
+    //TODO - get the current user from the User model
+    // Use the findById method to get the software item from the Software Model
+    const software = await Software.findById(req.params.id);
+    // make sure the item is removed from the database before sending the message.
+    await software.remove();
+    res.json({ software: "Software Item Deleted" });
+  } catch (error) {
+    res
+      .sendStatus(404)
+      .json({ softwarenotfound: "Software Item could not be deleted." });
+  }
+});
+
 //@route POST /api/software/
 //@desc Will create a document inside of the Software Model. This will consist of the softwareName, softwareCompany, serialNumber, and dateAquired.
 //@access Public but will be Private - a user will need to be authenticated.
