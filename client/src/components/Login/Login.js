@@ -21,12 +21,10 @@ const Login = () => {
     <section className="loginContainer">
       <div className="container">
         <div className="col-md-12">
-          {/* width: 900px */}
           <div className="loginBackground">
-            {/* width: 500px */}
             <div className="loginWhite">
-              <h1>Login</h1>
               <form onSubmit={handleSubmit} className="loginForm">
+                <h1>Login</h1>
                 <div className="formWrapper">
                   <label htmlFor="Email" className="formLabel">
                     Email
