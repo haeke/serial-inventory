@@ -1,11 +1,13 @@
 const dotenv = require("dotenv");
 dotenv.config();
+const cors = require("cors");
 const express = require("express");
 const morgan = require("morgan");
 const passport = require("passport");
 const connect = require("./connect");
 const bodyParser = require("body-parser");
 const app = express();
+app.use(cors());
 
 // require the list of routers
 const users = require("./routes/users");
@@ -35,7 +37,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 3002;
 
 connect(process.env.REACT_APP_MONGO_URI).then(() =>
   app.listen(port, () => {

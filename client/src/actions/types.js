@@ -8,6 +8,9 @@ export const CLOSE_MODAL = "CLOSE_MODAL";
 // Boolean value that will determine when to conditionally render the edit form
 export const EDIT_MODE = "EDIT_MODE";
 
+export const LOGIN_USER = "LOGIN_USER";
+export const REGISTER_USER = "REGISTER_USER";
+export const LOGOUT_USER = "LOGOUT_USER";
 // error objects
 export const GET_ERRORS = "GET_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";

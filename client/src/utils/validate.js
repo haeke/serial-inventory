@@ -21,16 +21,21 @@ export const validate = values => {
     errors.name = "The Name Field is required.";
   }
 
+  if (!values.password2) {
+    errors.password2 = "The Password Confirm Field is required";
+  }
+
+  return errors;
+};
+
+export const validateLogin = values => {
+  let errors = {};
   if (!values.email) {
     errors.email = "The Email Field is required.";
   }
 
   if (!values.password) {
     errors.password = "The Password Field is required";
-  }
-
-  if (!values.password2) {
-    errors.password2 = "The Password Confirm Field is required";
   }
 
   return errors;

@@ -71,7 +71,7 @@ router.post("/login", async (req, res) => {
         process.env.REACT_APP_SERVER_SECRET,
         { expiresIn: 3600 },
         (err, token) => {
-          res.json({
+          return res.json({
             sucess: true,
             token: "Bearer " + token
           });

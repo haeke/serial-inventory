@@ -1,21 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
 import { useForm } from "../../hooks/useForm";
-import { validate } from "../../utils/validate";
+import { validateLogin } from "../../utils/validate";
 import { Link } from "react-router-dom";
+
+import { loginUser } from "../../actions/loginActions";
 
 import Button from "../Button/Button";
 
 import "./Login.css";
 
-const Login = () => {
+const Login = ({ loginUser }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
-    loginUser,
-    validate
+    handleLogin,
+    validateLogin
   );
 
-  function loginUser() {
+  function handleLogin() {
     // TODO - pass the values to the action creator for creating a user.
-    console.log("called create user");
+    loginUser(values);
   }
   return (
     <section className="loginContainer">
@@ -91,4 +94,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default connect(
+  null,
+  { loginUser }
+)(Login);
