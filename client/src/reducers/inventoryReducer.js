@@ -13,12 +13,12 @@ export default (state = initialState, action) => {
     case CREATE_INVENTORY:
       return {
         ...state,
-        [action.payload.id]: action.payload
+        [action.payload._id]: action.payload
       };
     case FETCH_INVENTORY:
       return {
         ...state,
-        ..._.mapKeys(action.payload, "id")
+        ..._.mapKeys(action.payload, "_id")
       };
     case EDIT_INVENTORY:
       return {

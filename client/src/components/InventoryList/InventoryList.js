@@ -33,8 +33,8 @@ const IventoryList = ({ inventory, fetchInventory, errors }) => {
         <div className="inventoryListMargin">
           {inventory.map(software => (
             <InventoryCard
-              key={software.id}
-              softwareID={software.id}
+              key={software._id}
+              softwareID={software._id}
               softwareName={software.softwareName}
               softwareCompany={software.softwareCompany}
               serialNumber={software.serialNumber}

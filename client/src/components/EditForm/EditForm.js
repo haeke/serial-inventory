@@ -19,7 +19,8 @@ const EditForm = ({ modal, editMode, closeModal, editInventory }) => {
 
   function editItem() {
     // pass the values that we want to update
-    editInventory(inventoryItem.id, values)
+    // note the ._id was changed from .id so that the mongodb/express server can work
+    editInventory(inventoryItem._id, values)
       .then(() => editMode())
       .then(() => closeModal());
   }

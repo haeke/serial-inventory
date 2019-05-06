@@ -34,7 +34,7 @@ const Modal = ({
 
   const handleDelete = () => {
     // I'm using a promise chain to make sure that the actions are called in order.
-    deleteSoftwareItem(inventoryItem.id)
+    deleteSoftwareItem(inventoryItem._id)
       .then(() => fetchInventory())
       .then(() => closeModal())
       .catch(error => console.error(error));

@@ -14,7 +14,7 @@ import inventory from "../api/inventory";
 
 // We are using getState to set the ID of the object that we are going to add to the store. We are using the uuid package for now to generate a unique ID for all inventory items.
 export const createInventory = formValues => async dispatch => {
-  let newItem = { ...formValues, id: uuid() };
+  let newItem = { ...formValues, _id: uuid() };
   try {
     let response;
     // This will only be used for testing purposes
@@ -42,7 +42,7 @@ export const editInventory = (inventoryID, formValues) => async dispatch => {
   try {
     // Create a patch request to update the Form Value items.
     let response = await inventory.patch(
-      `/inventory/${inventoryID}`,
+      `/api/software/${inventoryID}`,
       formValues
     );
 
@@ -58,8 +58,13 @@ export const editInventory = (inventoryID, formValues) => async dispatch => {
 // Responsible for getting all of the items inside of the json-server, we just need to make a request to the /inventory route.
 export const fetchInventory = () => async dispatch => {
   try {
-    let response = await inventory.get("/inventory");
-    console.log(response);
+    let response;
+    // This is for testing the express server before pushing to production
+    if (process.env.REACT_APP_TEST === "testing") {
+      response = await inventory.get("/api/software");
+    } else {
+      response = await inventory.get("/inventory");
+    }
     dispatch({
       type: FETCH_INVENTORY,
       payload: response.data
@@ -75,7 +80,7 @@ export const fetchInventory = () => async dispatch => {
 // Responsible for deleting an item from the json-server, we just need to pass the softwareID to the redux store to remove the item from the inventory Reducer and send a delete request to the json-server database to remove the item.
 export const deleteSoftwareItem = softwareID => async dispatch => {
   try {
-    await inventory.delete(`/inventory/${softwareID}`);
+    await inventory.delete(`/api/software/${softwareID}`);
 
     dispatch({
       type: DELETE_INVENTORY_ITEM,
