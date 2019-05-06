@@ -15,7 +15,7 @@ export const loginUser = formValues => async dispatch => {
 
 export const registerUser = formValues => async dispatch => {
   try {
-    let response = await inventory("/api/users/register", formValues);
+    let response = await inventory.post("/api/users/register", formValues);
     dispatch({
       type: REGISTER_USER,
       payload: response.data

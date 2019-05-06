@@ -33,3 +33,21 @@ export const validateLogin = values => {
 
   return errors;
 };
+
+export const validateRegister = values => {
+  // This function will run to make sure the name, password and email fields in the Register component are not empty.
+  let errors = {};
+  if (!values.name) {
+    errors.name = "The Name field is required.";
+  }
+
+  if (!values.email) {
+    errors.email = "The E-mail field is required.";
+  }
+
+  if (!values.password) {
+    errors.password = "The Password field is required.";
+  }
+
+  return errors;
+};

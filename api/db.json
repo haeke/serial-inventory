@@ -1,10 +1,10 @@
 {
   "inventory": [
     {
-      "softwareName": "Office 2020",
+      "softwareName": "Office 2016",
       "softwareCompany": "Microsoft",
-      "serialNumber": "234-5356-632",
-      "dateAquired": "1999-10-11",
+      "serialNumber": "1444-234-1239",
+      "dateAquired": "2012-01-02",
       "id": "100ac83f-1837-459a-a71a-f3f5e4b588e6"
     },
     {

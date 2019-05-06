@@ -16,7 +16,13 @@ import inventory from "../api/inventory";
 export const createInventory = formValues => async dispatch => {
   let newItem = { ...formValues, id: uuid() };
   try {
-    let response = await inventory.post("/inventory", newItem);
+    let response;
+    // This will only be used for testing purposes
+    if (process.env.REACT_APP_TEST === "testing") {
+      response = await inventory.post("/api/software", newItem);
+    } else {
+      response = await inventory.post("/inventory", newItem);
+    }
     console.log(response);
     dispatch({
       type: CREATE_INVENTORY,
