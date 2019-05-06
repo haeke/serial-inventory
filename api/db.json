@@ -1,10 +1,10 @@
 {
   "inventory": [
     {
-      "softwareName": "Office 2021",
-      "softwareCompany": "Microsoft Corporation",
-      "serialNumber": "111-222-3333",
-      "dateAquired": "1998-10-02",
+      "softwareName": "Office 2020",
+      "softwareCompany": "Microsoft",
+      "serialNumber": "234-5356-632",
+      "dateAquired": "1999-10-11",
       "id": "100ac83f-1837-459a-a71a-f3f5e4b588e6"
     },
     {

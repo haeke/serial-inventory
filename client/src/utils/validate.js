@@ -17,18 +17,11 @@ export const validate = values => {
     errors.dateAquired = "The Date Aquired Field is required.";
   }
 
-  if (!values.name) {
-    errors.name = "The Name Field is required.";
-  }
-
-  if (!values.password2) {
-    errors.password2 = "The Password Confirm Field is required";
-  }
-
   return errors;
 };
 
 export const validateLogin = values => {
+  // This function will be run to make sure that the email and password fields are not left blank.
   let errors = {};
   if (!values.email) {
     errors.email = "The Email Field is required.";

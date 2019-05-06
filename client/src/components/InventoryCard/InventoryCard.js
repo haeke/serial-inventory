@@ -30,7 +30,7 @@ const InventoryCard = ({
     <div
       role="button"
       onClick={() => handleCardClick(softwareID)}
-      className="col-md-4 col-sm-6 col xs-12 card"
+      className="col-md-4 col-sm-6 col-xs-12 card"
     >
       <div>
         <label htmlFor="Software Name">Software Name</label>

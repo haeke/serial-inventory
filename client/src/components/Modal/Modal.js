@@ -73,14 +73,14 @@ const Modal = ({
                       buttonStyle="editButton"
                       onClick={handleEdit}
                     >
-                      <i class="fas fa-cog" />
+                      <i className="fas fa-cog" />
                     </Button>
                     <Button
                       as="button"
                       buttonStyle="deleteButton"
                       onClick={handleDelete}
                     >
-                      <i class="far fa-trash-alt" />
+                      <i className="far fa-trash-alt" />
                     </Button>
                   </div>
                   <div className="manageContent">

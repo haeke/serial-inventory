@@ -118,6 +118,9 @@ const EditForm = ({ modal, editMode, closeModal, editInventory }) => {
                 />
               </div>
               <div className="formWrapper">
+                <button type="submit" onClick={handleSubmit}>
+                  Edit
+                </button>
                 <Button
                   as={Link}
                   to="/all"
